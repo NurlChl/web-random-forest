@@ -31,16 +31,16 @@ def predict_dna_sequence(sequence):
     return predicted_class[0]
 
 # Streamlit UI
-st.title("DNA Sequence Prediction")
-st.write("Enter a DNA sequence to predict its class (DMT1, DMT2, NONDM).")
+st.title("Prediksi Sekuens DNA")
+st.write("Masukkan sekuens DNA yang ingin diprediksi ke dalam input dibawah ini. Model akan memprediksi sekuens DNA yang telah diinput. Prediksi akan menghasilkan diabetes tipe 1, tipe 2 atau Non Diabetes.")
 
 # Input: User enters the DNA sequence
-sequence_input = st.text_area("Enter DNA Sequence:", "")
+sequence_input = st.text_area("Masukkan Sekuens DNA:", "")
 
 # Button to make prediction
 if st.button("Predict"):
     if len(sequence_input) < 5:  # Ensure the sequence length is sufficient for k-mer creation
-        st.warning("Please enter a DNA sequence with at least 5 characters.")
+        st.warning("Paling sedikit 5 karakter.")
     else:
         predicted_class = predict_dna_sequence(sequence_input)
-        st.success(f"The predicted class for the entered DNA sequence is: **{predicted_class}**")
+        st.success(f"Kelas yang diprediksi untuk sekuens DNA yang dimasukkan adalah: **{predicted_class}**")
