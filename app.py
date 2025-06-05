@@ -37,7 +37,7 @@ st.markdown(
         --secondary: #3a0ca3;
         --accent: #f72585;
         --light: #f8f9fa;
-        --dark: #f8f9fa;
+        --dark: #212529;
         --success: #4cc9f0;
         --warning: #f8961e;
         --danger: #ef233c;
